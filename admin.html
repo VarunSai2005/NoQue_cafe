@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — CafeteriaUI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar container">
+    <div class="nav-left">
+      <div class="logo"><img src="logo192.png" alt="logo" /></div>
+      <div class="brand"><h1>CafeteriaUI</h1><p class="small">Admin Panel</p></div>
+    </div>
+    <nav class="nav-actions">
+      <a class="nav-link" href="index.html">Menu</a>
+      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link btn-ghost" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section style="max-width:1000px;margin:18px auto;">
+      <h2>Menu Editor</h2>
+      <div class="admin-grid">
+        <div>
+          <button id="add-item" class="btn">Add Item</button>
+          <div id="item-form" class="card" style="margin-top:12px;display:none">
+            <h3 id="form-title">New Item</h3>
+            <label>Name <input id="item-name" class="input" /></label>
+            <label>Description <input id="item-desc" class="input" /></label>
+            <label>Price <input id="item-price" class="input" type="number" /></label>
+            <label>Tags (comma separated) <input id="item-tags" class="input" /></label>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button id="save-item" class="btn">Save</button>
+              <button id="cancel-item" class="btn-ghost">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Existing Items</h3>
+          <div id="admin-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ initAdminPage(); });</script>
+</body>
+</html>

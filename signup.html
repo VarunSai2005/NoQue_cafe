@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signup — CafeteriaUI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar container">
+    <div class="nav-left">
+      <div class="logo"><img src="logo192.png" alt="logo" /></div>
+      <div class="brand"><h1>CafeteriaUI</h1><p class="small">Create account</p></div>
+    </div>
+    <nav class="nav-actions">
+      <a class="nav-link" href="index.html">Menu</a>
+      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link btn-ghost" href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="auth-box">
+      <h2>Signup</h2>
+      <form id="signup-form">
+        <label> Full name <input id="signup-name" class="input" required /> </label>
+        <label> Email <input id="signup-email" class="input" required /> </label>
+        <label> Password <input id="signup-pass" type="password" class="input" required /> </label>
+        <label> Role
+          <select id="signup-role" class="input">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" type="submit">Signup</button>
+          <a class="btn-ghost" href="login.html">Already have account?</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ initSignupPage(); });</script>
+</body>
+</html>

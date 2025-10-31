@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CafeteriaUI — Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar container">
+    <div class="nav-left">
+      <div class="logo"><img src="logo192.png" alt="logo" /></div>
+      <div class="brand">
+        <h1>CafeteriaUI</h1>
+        <p class="small">Warm. Friendly. Fast.</p>
+      </div>
+    </div>
+    <nav class="nav-actions" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Menu</a>
+      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link" href="login.html">Login</a>
+      <a class="nav-link btn-ghost" href="signup.html">Signup</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Welcome to the Cafeteria</h2>
+      <p class="lead">Fresh coffee, warm snacks and friendly service. Browse the menu, add to cart, and show your pickup token at the counter.</p>
+    </section>
+
+    <section class="controls">
+      <div class="searchbar">
+        <input id="search" placeholder="Search by name, description or tags (e.g. coffee, cold, veg)" aria-label="Search menu" />
+        <select id="sort" aria-label="Sort menu">
+          <option value="popular">Sort: Popular</option>
+          <option value="price-asc">Price ↑</option>
+          <option value="price-desc">Price ↓</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="menu-grid" class="cards" aria-live="polite"></section>
+
+    <footer class="footer container">
+      <p>Made with ☕ — CafeteriaUI</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ initMenuPage(); });</script>
+</body>
+</html>
